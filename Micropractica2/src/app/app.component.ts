@@ -22,4 +22,14 @@ export class AppComponent {
     this.precios[i] = this.precios[i] * 0.9;
     this.pvps[i] = this.pvps[i] * 0.9;;
   }
+
+  public vendido(i: number){
+    //this.precios.splice(i,1);
+    delete this.marcas[i];
+    delete this.modelos[i];
+    delete this.anos[i];
+    delete this.fechaVenta[i];
+    delete this.precios[i];
+    delete this.pvps[i];
+  }
 }
