@@ -1,5 +1,6 @@
 import { variable } from '@angular/compiler/src/output/output_ast';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Micropractica2';
   public x: number = 0;
+  public input:string = "";
 
   coche1:ICoche={
     marca: "RENAULT",
@@ -54,6 +56,10 @@ export class AppComponent {
   public vendido(id:string) {
     document.getElementById(id)?.remove();
   };
+
+  public filtro(){
+    this.input = ""
+  }
 
   public coches:Array<ICoche>=[this.coche1, this.coche2, this.coche3, this.coche4];
 }
