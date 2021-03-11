@@ -1,7 +1,7 @@
 <body>
   <div style="text-align: center;">
     <label>Filtrar por: </label>
-    <input type="text">
+    <input type="text" placeholder="(marca de coche)">
   </div>
   <div style="text-align: center;">
     <table id="table">
@@ -15,56 +15,56 @@
         <th>PVP</th>
         <th>Acciones</th>
       </tr>
-      <tr>
+      <tr id="scenic">
         <td><img src="/Micropractica2/images/scenic.jpg" alt="SCENIC"></td>
-        <td>{{ marcas[0] }}</td>
-        <td>{{ modelos[0] }}</td>
-        <td>{{ anos[0] }}</td>
-        <td>{{ fechaVenta[0] }}</td>
-        <td>{{ precios[0] }}</td>
-        <td>{{ pvps[0] }}</td>
+        <td>{{coches[0].marca | uppercase}}</td>
+        <td>{{coches[0].modelo}}</td>
+        <td>{{coches[0].ano}}</td>
+        <td>{{coches[0].fecha}}</td>
+        <td>{{coches[0].precio}}</td>
+        <td>{{coches[0].PVP}}</td>
         <td>
-          <button (click)='rebajar(0)'>Rebajar</button>
-          <button (click)='vendido(0)'>Vendido</button>
+          <button (click)='rebajar(coches[0])'>Rebajar</button>
+          <button (click)='vendido("scenic")'>Vendido</button>
         </td>
       </tr>
-      <tr>
-        <td><img src="/Micropractica2/images/ibiza.jpg" alt="IBIZA"></td>
-        <td>{{ marcas[1] }}</td>
-        <td>{{ modelos[1] }}</td>
-        <td>{{ anos[1] }}</td>
-        <td>{{ fechaVenta[1] }}</td>
-        <td>{{ precios[1] }}</td>
-        <td>{{ pvps[1] }}</td>
+      <tr id="ibiza">
+        <td><img src="/Micropractica2/images/ibiza.jpg" alt="SCENIC"></td>
+        <td>{{coches[1].marca | uppercase}}</td>
+        <td>{{coches[1].modelo}}</td>
+        <td>{{coches[1].ano}}</td>
+        <td>{{coches[1].fecha}}</td>
+        <td>{{coches[1].precio}}</td>
+        <td>{{coches[1].PVP}}</td>
         <td>
-          <button (click)='rebajar(1)'>Rebajar</button>
-          <button (click)='vendido(1)'>Vendido</button>
+          <button (click)='rebajar(coches[1])'>Rebajar</button>
+          <button (click)='vendido("ibiza")'>Vendido</button>
         </td>
       </tr>
-      <tr>
-        <td><img src="/Micropractica2/images/megane.jpg" alt="MEGANE"></td>
-        <td>{{ marcas[2] }}</td>
-        <td>{{ modelos[2] }}</td>
-        <td>{{ anos[2] }}</td>
-        <td>{{ fechaVenta[2] }}</td>
-        <td>{{ precios[2] }}</td>
-        <td>{{ pvps[2] }}</td>
+      <tr id="megane">
+        <td><img src="/Micropractica2/images/megane.jpg" alt="SCENIC"></td>
+        <td>{{coches[2].marca | uppercase}}</td>
+        <td>{{coches[2].modelo}}</td>
+        <td>{{coches[2].ano}}</td>
+        <td>{{coches[2].fecha}}</td>
+        <td>{{coches[2].precio}}</td>
+        <td>{{coches[2].PVP}}</td>
         <td>
-          <button (click)='rebajar(2)'>Rebajar</button>
-          <button (click)='vendido(2)'>Vendido</button>
+          <button (click)='rebajar(coches[2])'>Rebajar</button>
+          <button (click)='vendido("megane")'>Vendido</button>
         </td>
       </tr>
-      <tr>
-        <td><img src="" alt="(sin foto!)"></td>
-        <td>{{ marcas[3] }}</td>
-        <td>{{ modelos[3] }}</td>
-        <td>{{ anos[3] }}</td>
-        <td>{{ fechaVenta[3] }}</td>
-        <td>{{ precios[3] }}</td>
-        <td>{{ pvps[3] }}</td>
+      <tr id="model 3">
+        <td><img src="" alt="TESLA"></td>
+        <td>{{coches[3].marca | uppercase}}</td>
+        <td>{{coches[3].modelo}}</td>
+        <td>{{coches[3].ano}}</td>
+        <td>{{coches[3].fecha}}</td>
+        <td>{{coches[3].precio}}</td>
+        <td>{{coches[3].PVP}}</td>
         <td>
-          <button (click)='rebajar(3)'>Rebajar</button>
-          <button (click)='vendido(3)'>Vendido</button>
+          <button (click)='rebajar(coches[3])'>Rebajar</button>
+          <button (click)='vendido("model 3")'>Vendido</button>
         </td>
       </tr>
     </table>
