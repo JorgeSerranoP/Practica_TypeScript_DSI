@@ -14,7 +14,7 @@ export class AppComponent {
   public input:string = "";
 
   coche1:ICoche={
-    imagen: "Micropractica2\dist\Micropractica2\assets\images\scenic.jpg",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/b/bd/2017_Renault_Grand_Scenic_SIG_NAV_DCi_1.5_Front.jpg",
     marca: "RENAULT",
     modelo: "scenic",
     ano: 2007,
@@ -25,7 +25,7 @@ export class AppComponent {
   };
 
   coche2:ICoche={
-    imagen: "Micropractica2/images/megane.jpg",
+    imagen: "https://cdn.motor1.com/images/mgl/M1RWm/s1/guia-de-compra-seat-ibiza-tgi-2019-todas-las-claves.jpg",
     marca: "SEAT",
     modelo: "ibiza",
     ano: 2003,
@@ -36,7 +36,7 @@ export class AppComponent {
   };
 
   coche3:ICoche={
-    imagen: "./Micropractica2/images/megane.jpg",
+    imagen: "https://cdn.motor1.com/images/mgl/lXJZN/s1/renault-megane-hybrid-spy-photos.jpg",
     marca: "RENAULT",
     modelo: "megane",
     ano: 2007,
@@ -47,7 +47,7 @@ export class AppComponent {
   };
 
   coche4:ICoche={
-    imagen: "./Micropractica2/images/megane.jpg",
+    imagen: "https://upload.wikimedia.org/wikipedia/commons/9/91/2019_Tesla_Model_3_Performance_AWD_Front.jpg",
     marca: "TESLA",
     modelo: "model 3",
     ano: 2007,
