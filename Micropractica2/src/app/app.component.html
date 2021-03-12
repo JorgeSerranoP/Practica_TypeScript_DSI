@@ -15,56 +15,17 @@
         <th>PVP</th>
         <th>Acciones</th>
       </tr>
-      <tr id="scenic" *ngIf="input.toUpperCase() == coches[0].marca">
-        <td><img src="/Micropractica2/images/scenic.jpg" alt="SCENIC"></td>
-        <td>{{coches[0].marca | uppercase}}</td>
-        <td>{{coches[0].modelo}}</td>
-        <td>{{coches[0].ano}}</td>
-        <td>{{coches[0].fecha}}</td>
-        <td>{{coches[0].precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
-        <td>{{coches[0].PVP | currency:'EUR':'symbol':'.0-0':'es'}}</td>
+      <tr id="scenic" *ngFor='let coche of coches; let i=index'>
+        <td><img [src]="coches[i].imagen" [alt]=coches[i].modelo/></td>
+        <td>{{coches[i].marca | uppercase}}</td>
+        <td>{{coches[i].modelo}}</td>
+        <td>{{coches[i].ano}}</td>
+        <td>{{coches[i].fecha}}</td>
+        <td>{{coches[i].precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
+        <td>{{coches[i].PVP | currency:'EUR':'symbol':'.0-0':'es'}}</td>
         <td>
-          <button (click)='rebajar(coches[0])'>Rebajar</button>
-          <button (click)='vendido("scenic")'>Vendido</button>
-        </td>
-      </tr>
-      <tr id="ibiza" *ngIf="input.toUpperCase() == coches[1].marca">
-        <td><img src="/Micropractica2/images/ibiza.jpg" alt="SCENIC"></td>
-        <td>{{coches[1].marca | uppercase}}</td>
-        <td>{{coches[1].modelo}}</td>
-        <td>{{coches[1].ano}}</td>
-        <td>{{coches[1].fecha}}</td>
-        <td>{{coches[1].precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
-        <td>{{coches[1].PVP | currency:'EUR':'symbol':'.0-0':'es'}}</td>
-        <td>
-          <button (click)='rebajar(coches[1])'>Rebajar</button>
-          <button (click)='vendido("ibiza")'>Vendido</button>
-        </td>
-      </tr>
-      <tr id="megane" *ngIf="input.toUpperCase() == coches[2].marca">
-        <td><img src="/Micropractica2/images/megane.jpg" alt="SCENIC"></td>
-        <td>{{coches[2].marca | uppercase}}</td>
-        <td>{{coches[2].modelo}}</td>
-        <td>{{coches[2].ano}}</td>
-        <td>{{coches[2].fecha}}</td>
-        <td>{{coches[2].precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
-        <td>{{coches[2].PVP | currency:'EUR':'symbol':'.0-0':'es'}}</td>
-        <td>
-          <button (click)='rebajar(coches[2])'>Rebajar</button>
-          <button (click)='vendido("megane")'>Vendido</button>
-        </td>
-      </tr>
-      <tr id="model 3" *ngIf="input.toUpperCase() == coches[3].marca">
-        <td><img src="" alt="TESLA"></td>
-        <td>{{coches[3].marca | uppercase}}</td>
-        <td>{{coches[3].modelo}}</td>
-        <td>{{coches[3].ano}}</td>
-        <td>{{coches[3].fecha}}</td>
-        <td>{{coches[3].precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
-        <td>{{coches[3].PVP | currency:'EUR':'symbol':'.0-0':'es'}}</td>
-        <td>
-          <button (click)='rebajar(coches[3])'>Rebajar</button>
-          <button (click)='vendido("model 3")'>Vendido</button>
+          <button (click)='rebajar(coches[i])'>Rebajar</button>
+          <button (click)='vendido(i)'>Vendido</button>
         </td>
       </tr>
     </table>
