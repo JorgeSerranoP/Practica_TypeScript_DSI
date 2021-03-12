@@ -23,7 +23,8 @@
           <td>{{coche.modelo}}</td>
           <td>{{coche.ano}}</td>
           <td>{{coche.fecha}}</td>
-          <td [style.background-color]=coche.color>{{coche.precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
+          <td *ngIf="coche.estado" class="buenEstado">{{coche.precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
+          <td *ngIf="!coche.estado" class="malEstado">{{coche.precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
           <td>{{coche.PVP | currency:'EUR':'symbol':'.0-0':'es'}}</td>
           <td>
             <button (click)='rebajar(i)'>Rebajar</button>

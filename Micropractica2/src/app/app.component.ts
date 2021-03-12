@@ -1,7 +1,6 @@
 import { variable } from '@angular/compiler/src/output/output_ast';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +20,7 @@ export class AppComponent {
     fecha: "04-2018",
     precio: 5000,
     PVP: 6050,
-    color: "#1DDC17"
+    estado: true
   };
 
   coche2:ICoche={
@@ -32,7 +31,7 @@ export class AppComponent {
     fecha: "03-2018",
     precio: 1200,
     PVP: 1452,
-    color: "#1DDC17"
+    estado: true
   };
 
   coche3:ICoche={
@@ -43,7 +42,7 @@ export class AppComponent {
     fecha: "03-2018",
     precio: 3500,
     PVP: 4235,
-    color: "#1DDC17"
+    estado: false
   };
 
   coche4:ICoche={
@@ -54,7 +53,7 @@ export class AppComponent {
     fecha: "03-2018",
     precio: 4000,
     PVP: 4840,
-    color: "#EB1616"
+    estado: true
   };
 
   public rebajar(i:number) {
@@ -78,5 +77,5 @@ export interface ICoche{
   fecha:string;
   precio: number;
   PVP: number;
-  color: string;
+  estado: boolean;
 }
