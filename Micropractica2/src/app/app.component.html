@@ -21,7 +21,7 @@
         <td>{{coches[i].modelo}}</td>
         <td>{{coches[i].ano}}</td>
         <td>{{coches[i].fecha}}</td>
-        <td>{{coches[i].precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
+        <td [style.background-color]=coches[i].color>{{coches[i].precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
         <td>{{coches[i].PVP | currency:'EUR':'symbol':'.0-0':'es'}}</td>
         <td>
           <button (click)='rebajar(coches[i])'>Rebajar</button>

@@ -21,7 +21,7 @@ export class AppComponent {
     fecha: "04-2018",
     precio: 5000,
     PVP: 6050,
-    visible:true
+    color: "#1DDC17"
   };
 
   coche2:ICoche={
@@ -32,7 +32,7 @@ export class AppComponent {
     fecha: "03-2018",
     precio: 1200,
     PVP: 1452,
-    visible:true
+    color: "#1DDC17"
   };
 
   coche3:ICoche={
@@ -43,7 +43,7 @@ export class AppComponent {
     fecha: "03-2018",
     precio: 3500,
     PVP: 4235,
-    visible:true
+    color: "#1DDC17"
   };
 
   coche4:ICoche={
@@ -54,7 +54,7 @@ export class AppComponent {
     fecha: "03-2018",
     precio: 4000,
     PVP: 4840,
-    visible:true
+    color: "#EB1616"
   };
 
   public rebajar(coche:ICoche) {
@@ -67,15 +67,6 @@ export class AppComponent {
     console.log(this.coches);
   };
 
-  public filtro(coche:ICoche){
-      if(this.input.toUpperCase() == coche.marca){
-        return true;
-      } else{
-        coche.visible = false;
-    }
-    return false;
-  }
-
   public coches:Array<ICoche>=[this.coche1, this.coche2, this.coche3, this.coche4];
 }
 
@@ -87,7 +78,7 @@ export interface ICoche{
   fecha:string;
   precio: number;
   PVP: number;
-  visible: boolean;
+  color: string;
 }
 
 export class CCoche{
