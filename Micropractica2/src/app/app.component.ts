@@ -57,9 +57,9 @@ export class AppComponent {
     color: "#EB1616"
   };
 
-  public rebajar(coche:ICoche) {
-    coche.precio =  coche.precio * 0.9;
-    coche.PVP = coche.PVP * 0.9;
+  public rebajar(i:number) {
+    this.coches[i].precio =  this.coches[i].precio * 0.9;
+    this.coches[i].PVP =  this.coches[i].PVP * 0.9;
   };
 
   public vendido(i:number) {
@@ -68,8 +68,8 @@ export class AppComponent {
   };
 
   public coches:Array<ICoche>=[this.coche1, this.coche2, this.coche3, this.coche4];
-}
 
+}
 export interface ICoche{
   imagen: string;
   marca?: string;

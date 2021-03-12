@@ -13,20 +13,24 @@
         <th>En venta desde</th>
         <th>Precio</th>
         <th>PVP</th>
-        <th>Acciones</th>
+        <th>Acciones</th>  
       </tr>
-      <tr id="scenic" *ngFor='let coche of coches; let i=index'>
-        <td><img [src]="coches[i].imagen" [alt]=coches[i].modelo/></td>
-        <td>{{coches[i].marca | uppercase}}</td>
-        <td>{{coches[i].modelo}}</td>
-        <td>{{coches[i].ano}}</td>
-        <td>{{coches[i].fecha}}</td>
-        <td [style.background-color]=coches[i].color>{{coches[i].precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
-        <td>{{coches[i].PVP | currency:'EUR':'symbol':'.0-0':'es'}}</td>
-        <td>
-          <button (click)='rebajar(coches[i])'>Rebajar</button>
-          <button (click)='vendido(i)'>Vendido</button>
-        </td>
+      
+     
+      <tr *ngFor='let coche of coches; let i=index'>
+        <ng-container *ngIf="input.toUpperCase() == coche.marca || input == '' ">
+          <td><img [src]="coche.imagen" [alt]=coche.modelo/></td>
+          <td>{{coche.marca | uppercase}}</td>
+          <td>{{coche.modelo}}</td>
+          <td>{{coche.ano}}</td>
+          <td>{{coche.fecha}}</td>
+          <td [style.background-color]=coche.color>{{coche.precio | currency:'EUR':'symbol':'.0-0':'es'}}</td>
+          <td>{{coche.PVP | currency:'EUR':'symbol':'.0-0':'es'}}</td>
+          <td>
+            <button (click)='rebajar(i)'>Rebajar</button>
+            <button (click)='vendido(i)'>Vendido</button>
+          </td>
+        </ng-container>
       </tr>
     </table>
   </div>
