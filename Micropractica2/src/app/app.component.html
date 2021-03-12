@@ -15,10 +15,9 @@
         <th>PVP</th>
         <th>Acciones</th>  
       </tr>
-      
-     
+          
       <tr *ngFor='let coche of coches; let i=index'>
-        <ng-container *ngIf="input.toUpperCase() == coche.marca || input == '' ">
+        <ng-container *ngIf="coche.marca.startsWith(input.toUpperCase()) || input == '' ">
           <td><img [src]="coche.imagen" [alt]=coche.modelo/></td>
           <td>{{coche.marca | uppercase}}</td>
           <td>{{coche.modelo}}</td>

@@ -72,22 +72,11 @@ export class AppComponent {
 }
 export interface ICoche{
   imagen: string;
-  marca?: string;
+  marca: string;
   modelo: string;
   ano: number;
   fecha:string;
   precio: number;
   PVP: number;
   color: string;
-}
-
-export class CCoche{
-  public rebajar(coche:ICoche) {
-    coche.precio =  coche.precio * 0.9;
-    coche.PVP = coche.PVP * 0.9;
-  };
-
-  public vendido(coche:ICoche) {
-    delete coche.marca;
-  };
 }
